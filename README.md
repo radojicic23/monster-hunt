@@ -10,11 +10,11 @@ If you see that you are about to collide with the wrong monster, you can hit spa
 - Pygame
 
 # Game Mechanics
-- <li><code>LEFT</code> Move Left</li>
-- <li><code>RIGHT</code> Move Right</li>
-- <li><code>UP</code> Move Up</li>
-- <li><code>DOWN</code> Move Down</li>
-- <li><code>SPACEBAR</code> WARP(Safe Zone)</li>
+- <code>LEFT</code> Move Left
+- <code>RIGHT</code> Move Right
+- <code>UP</code> Move Up
+- <code>DOWN</code> Move Down
+- <code>SPACEBAR</code> WARP(Safe Zone)
 
 # Running the Game
 Run main.py to start the game.
