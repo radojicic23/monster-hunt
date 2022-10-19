@@ -8,10 +8,13 @@ from game import Game
 
 pygame.init()
 
-
 # Set FPS
 FPS = 60
 
+# Set background image and rect
+background_image = pygame.image.load("Assets/background.jpg")
+background_rect = background_image.get_rect()
+background_rect.topleft = (0, 0)
        
 # Create a player group and Player object
 my_player_group = pygame.sprite.Group()
@@ -33,6 +36,7 @@ def main():
     my_game.pause_game("Monster Hunt", "Press 'Enter' to begin")
     my_game.reset_game()
     
+    # Main game loop
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -43,7 +47,7 @@ def main():
                     my_player.warp()
     
         # Fill the display
-        display_surface.fill((0, 0, 0))
+        display_surface.blit(background_image, background_rect)
     
         # Update and draw sprite groups
         my_player_group.update()
@@ -60,7 +64,6 @@ def main():
         pygame.display.update()
         clock.tick(FPS)
             
-
     pygame.quit()
 
 main()
